@@ -1,0 +1,18 @@
+﻿==STANDARD DOCUMENTATION==
+
+…......... GENERAL OVERVIEW--
+
+PROBLEM:	Kenya, being a well-to-do nation is faced by open-daylight discrimination of
+			citizens. Some extreme cases report "murder" of "innocent" lives.
+			Accidents are bound to occur in unsafe points along national trunks. The victims are sometimes subject
+			to pain and some succumb upon delayed aid.
+
+			This software comes in handy since:
+		
+
+001:	this product implements the layout of all roads in a country and display current active traffic. 
+		It should define traffic patterns and indicate any emergencies instantly for real-time processing of these cases.
+		By "processing," we mean handling accidents(and other traffic-related issues) in good time before much harm or loss.
+
+002:	this product is meant to provide room for alerts "by-citizens-for-citizens". This will implement a platform for communication amongst
+		the citizens when a situation occurs anywhere in the country.
