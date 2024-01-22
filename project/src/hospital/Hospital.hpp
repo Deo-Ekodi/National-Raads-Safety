@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <stdexcept>
 
 using namespace std;
 namespace hos
@@ -24,7 +25,8 @@ namespace hos
     };  // class Hospital
 
     [[noreturn]] void assertInvalidArguments(string& message){
-        ;
+        cerr << message << flush << endl;
+        terminate();
     }
     std::map<double, double, std::less<double> > Hospital::getLocation()
     {
