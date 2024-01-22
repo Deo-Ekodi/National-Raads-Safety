@@ -14,7 +14,7 @@ namespace urb{
     const double _proximity(const urban& x, const urban& y);
     const map<pair<string, string>, double> proximity(initializer_list<const urban>& lst);
 
-    // below implements deprecation qith warnings!
+    // below implements deprecation with warnings!
     // [[deprecated("avoid using \'info\', urban area information is yet to be removed from access!")]]
     const string info(const urban& ur);
 
