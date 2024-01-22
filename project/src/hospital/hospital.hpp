@@ -32,9 +32,9 @@ namespace hos{
         }
         virtual ~hospital() = default;
 
-        void setLocation(const std::string &str) { this->location = str; }
+        [[noreturn]]void setLocation(const std::string &str) { this->location = str; std::terminate();}
 
-        void setHospitalName(const std::string &str) { this->hospitalName = str; }
+        void setHospitalName(const std::string &str) {this->hospitalName = str; }
         const std::string &getHospitalName() const { return this->hospitalName; }
 
         void setContact(const std::string &str) { this->contact = str; }
