@@ -21,8 +21,11 @@ namespace hos
 
         std::map<double, double, std::less<double> > getLocation();
         std::string info() const override;
-    };
+    };  // class Hospital
 
+    [[noreturn]] void assertInvalidArguments(string& message){
+        ;
+    }
     std::map<double, double, std::less<double> > Hospital::getLocation()
     {
         std::map<double, double, std::less<double> > pr;
