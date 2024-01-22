@@ -10,6 +10,15 @@
 
 using namespace std;
 namespace urb{
+
+    const double _proximity(const urban& x, const urban& y);
+    const map<pair<string, string>, double> proximity(initializer_list<const urban>& lst);
+
+    // below implements deprecation qith warnings!
+    // [[deprecated("avoid using \'info\', urban area information is yet to be removed from access!")]]
+    const string info(const urban& ur);
+
+
     const double _proximity(const urban& x, const urban& y){
         return hypot(abs(x.getX() - y.getX()), abs(x.getY() - y.getY()));
     }
