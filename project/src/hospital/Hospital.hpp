@@ -2,15 +2,15 @@
 
 #include <vector>
 #include <algorithm>
-#include <stdexcept>
+// #include <stdexcept>s
 
-using namespace std;
 namespace hos
 {
     class Hospital : public hospital
     {
     private:
         std::pair<double, double> xyLocation;
+	//;
     public:
         Hospital() = default;
         explicit Hospital(const std::initializer_list<std::string> &lst, int &sHours)
@@ -24,10 +24,10 @@ namespace hos
         std::string info() const override;
     };  // class Hospital
 
-    [[noreturn]] void assertInvalidArguments(string& message){
-        cerr << message << flush << endl;
-        terminate();
-    }
+    // [[noreturn]] void assertInvalidArguments(std::string& message){
+    //     cerr << message << flush << endl;
+    //     std::terminate();
+    // }
     std::map<double, double, std::less<double> > Hospital::getLocation()
     {
         std::map<double, double, std::less<double> > pr;
