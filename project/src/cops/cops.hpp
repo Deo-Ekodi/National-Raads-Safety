@@ -66,7 +66,6 @@ namespace cops{
         {
             std::cerr << e.what() << std::flush;
         }
-        
     }
 /* setters */
     void PolicePost::setName(std::string& str){
