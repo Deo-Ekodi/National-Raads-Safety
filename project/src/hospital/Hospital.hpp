@@ -2,7 +2,6 @@
 
 #include <vector>
 #include <algorithm>
-// #include <stdexcept>s
 
 namespace hos
 {
@@ -24,10 +23,14 @@ namespace hos
         std::string info() const override;
     };  // class Hospital
 
-    // [[noreturn]] void assertInvalidArguments(std::string& message){
-    //     cerr << message << flush << endl;
-    //     std::terminate();
-    // }
+/**
+ * code below should only be used i exceptions!
+ * 
+ *  [[noreturn]] void assertInvalidArguments(std::string& message){
+        cerr << message << flush << endl;
+        std::terminate();
+    }
+*/
     std::map<double, double, std::less<double> > Hospital::getLocation()
     {
         std::map<double, double, std::less<double> > pr;

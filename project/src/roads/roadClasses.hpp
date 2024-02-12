@@ -4,11 +4,7 @@
 
 using namespace std;
 
-class classA;
-class classB;
-class classC;
-class classD;
-
+namespace road{
 class classA final : public road
 {
 private:
@@ -46,3 +42,4 @@ public:
         this->trafficRating = str;
     }
 };
+}    // namespace road

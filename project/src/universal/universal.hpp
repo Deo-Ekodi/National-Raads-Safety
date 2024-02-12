@@ -8,6 +8,13 @@
 #include <string>
 #include <list>
 #include <stdexcept>
+#include "hospital/Hospital.hpp"
+#include "hospital/Hospital.hpp"
+#include "roads/roadClasses.hpp"
+#include "roads/roads.hpp"
+#include "cops/cops.hpp"
+#include "urbanAreas/urban.hpp"
+#include "urbanAreas/urbanUtils.hpp"
 
 
 namespace univ{
@@ -21,4 +28,7 @@ namespace univ{
        temp->second = -1.0;
        return temp;
     }
+
+    int add(hos::Hospital*);
+    int add(rod::)
 }    // namespace univ
