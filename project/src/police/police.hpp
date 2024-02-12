@@ -5,7 +5,7 @@
 #include <iterator>
 
 namespace cops{
-    class PolicePost
+    class Police
     {
     private:
         std::string* sName;
@@ -15,9 +15,9 @@ namespace cops{
         std::pair<double, double>* xyLocation;
 
     public:
-        PolicePost();
-        PolicePost(const std::initializer_list<std::string&>&);
-        ~PolicePost() = default;
+        Police();
+        Police(const std::initializer_list<std::string&>&);
+        ~Police() = default;
 
         std::string* getName()const;
         std::string* getAddress()const;
@@ -30,13 +30,13 @@ namespace cops{
         void setLocation(std::string&);
 
         bool recCoordinates(std::string*);
-        void init(PolicePost*);
+        void init(Police*);
 
-        PolicePost& operator = (PolicePost&) = delete;
-        PolicePost& operator = (const PolicePost&) = delete;
+        Police& operator = (Police&) = delete;
+        Police& operator = (const Police&) = delete;
     };
 
-    PolicePost::PolicePost()
+    Police::Police()
     {
         this->sAddress = nullptr;
         this->sContact = nullptr;
@@ -45,8 +45,8 @@ namespace cops{
         this->xyLocation->first = -1.0;
         this->xyLocation->second = -1.0;
     }
-    
-    PolicePost::PolicePost(const std::initializer_list<std::string&>& lst)
+
+    Police::Police(const std::initializer_list<std::string&>& lst)
     {
         try
         {
@@ -68,39 +68,39 @@ namespace cops{
         }
     }
 /* setters */
-    void PolicePost::setName(std::string& str){
+    void Police::setName(std::string& str){
         this->sName = &str;
     }
-    void PolicePost::setAddress(std::string& str){
+    void Police::setAddress(std::string& str){
         this->sAddress = &str;
     }
-    void PolicePost::setContact(std::string& str){
+    void Police::setContact(std::string& str){
         this->sContact = &str;
     }
-    void PolicePost::setLocation(std::string& str){
+    void Police::setLocation(std::string& str){
         this->sLocation = &str;
     }
 /* getters */
-    std::string* PolicePost::getName()const{
+    std::string* Police::getName()const{
         return this->sName;
     }
-    std::string* PolicePost::getAddress()const{
+    std::string* Police::getAddress()const{
         return this->sAddress;
     }
-    std::string* PolicePost::getContact()const{
+    std::string* Police::getContact()const{
         return this->sContact;
     }
-    std::string* PolicePost::getLocation()const{
+    std::string* Police::getLocation()const{
         return this->sLocation;
     }
 /* other functions */
-    bool PolicePost::recCoordinates(std::string* str){
+    bool Police::recCoordinates(std::string* str){
         xyLocation = univ::recCoordinates(str);
         if((xyLocation->first != -1.0) || (xyLocation->second == -1.0))
             return false;
         return true;
     }
-    void PolicePost::init(PolicePost*){
+    void Police::init(Police*){
         if(this->sName != nullptr)
             return;
         std::string *s0, *s1, *s2, *s3;
@@ -118,5 +118,4 @@ namespace cops{
         this->setLocation(*s2);
         this->setContact(*s3);
     }
-    
 }    // namespace cops
